@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { sendUrlAction } from '../../actions/actionIndex'
+import { sendUrlAction, destructureContentAction } from '../../actions/actionIndex'
+import { destructureUrl } from '../../api'
 
 export class Search extends Component {
   constructor(props) {
@@ -18,9 +19,14 @@ export class Search extends Component {
     this.setState({input: e.target.value})
   }
 
-  handleClick = () => {
-    console.log('sending: ', this.state.input)
-    this.props.sendUrl(this.state.input)
+  handleClick = async () => {
+    const url = this.state.input
+
+    this.props.sendUrl(url)
+    const response = await destructureUrl(url)
+
+    this.props.sendContent(response)
+    console.log('response: ', response)
   }
 
   render() {
@@ -40,7 +46,8 @@ export class Search extends Component {
 }
 
 const mapDispatch = (dispatch) => ({
-  sendUrl: (url) => dispatch(sendUrlAction(url))
+  sendUrl: (url) => dispatch(sendUrlAction(url)),
+  sendContent: (content) => dispatch(destructureContentAction(content))
 })
 
 export default connect(null, mapDispatch)(Search)
