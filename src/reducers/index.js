@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
+import { sendUrlReducer } from './sendUrlReducer'
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  url: sendUrlReducer,
+});
 
 export default rootReducer;
