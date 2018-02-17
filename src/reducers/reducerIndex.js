@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import { sendUrlReducer } from './sendUrlReducer'
 import { destructureContentReducer } from './destructureContentReducer'
+import { cleanArticleReducer } from './cleanArticleReducer'
 
 const rootReducer = combineReducers({
   url: sendUrlReducer,
-  content: destructureContentReducer,
-});
+  rawContent: destructureContentReducer,
+  cleanArticle: cleanArticleReducer,
+})  
 
-export default rootReducer;
+export default rootReducer
