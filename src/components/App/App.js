@@ -4,6 +4,7 @@ import './App.css'
 
 //components
 import Search from '../Search/Search'
+import { Main } from '../Main/Main'
 
 export class App extends Component {
   render() {
@@ -13,8 +14,9 @@ export class App extends Component {
           <h1 className="App-title">Truth-check</h1>
         </header>
         <Search />
+        <Main />
       </div>
-    );
+    )
   }
 }
 
