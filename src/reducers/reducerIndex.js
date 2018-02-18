@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux';
-import { sendUrlReducer } from './sendUrlReducer'
-import { destructureContentReducer } from './destructureContentReducer'
+import { combineReducers } from 'redux'
 import { cleanArticleReducer } from './cleanArticleReducer'
+import { errorReducer } from './errorReducer'
+import { ratingReducer } from './ratingReducer'
 
 const rootReducer = combineReducers({
-  url: sendUrlReducer,
-  rawContent: destructureContentReducer,
+  error: errorReducer,
+  rating: ratingReducer,
   cleanArticle: cleanArticleReducer,
 })  
 
