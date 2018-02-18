@@ -1,7 +1,7 @@
 export const cleanArticle = (article) => {
   //console.log('cleaner: ', article)
   const { title, type } = article
-  const { author, date, siteName, text } = article.objects[0]
+  const { author, date, siteName, text, authorUrl, pageUrl } = article.objects[0]
 
   return {
     title,
@@ -9,6 +9,8 @@ export const cleanArticle = (article) => {
     author,
     date,
     siteName,
-    text
+    text, 
+    authorUrl,
+    pageUrl  
   }
 }

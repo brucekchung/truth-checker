@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { cleanArticle } from '../../cleaner'
-import { sendUrlAction, destructureContentAction, cleanArticleAction } from '../../actions/actionIndex'
+import { cleanArticleAction, errorAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating } from '../../api'
+import './Search.css'
 
 export class Search extends Component {
   constructor(props) {
@@ -19,10 +20,18 @@ export class Search extends Component {
   handleClick = async () => {
     const url = this.state.input
     const response = await destructureUrl(url)
-    const cleaned = cleanArticle(response)
 
-    this.props.sendCleanArticle(cleaned)
-    this.getOrganization()
+    if (response.errorCode) {
+      console.log('error is: ', response)
+      this.props.sendError(response)
+
+    } else {
+      const cleaned = cleanArticle(response)
+
+      this.props.sendCleanArticle(cleaned)
+      this.props.sendError(null)
+      this.getOrganization()
+    }
   }
 
   getOrganization = async () => {
@@ -34,7 +43,7 @@ export class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Search">
         <input
           value={this.state.input}
           onChange={this.handleInput}
@@ -53,8 +62,7 @@ const mapState = (state) => ({
 })
 
 const mapDispatch = (dispatch) => ({
-  //sendUrl: (url) => dispatch(sendUrlAction(url)),
-  //sendContent: (content) => dispatch(destructureContentAction(content)),
+  sendError: (error) => dispatch(errorAction(error)),
   sendCleanArticle: (article) => dispatch(cleanArticleAction(article)),
 })
 
