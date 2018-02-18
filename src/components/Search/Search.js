@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { cleanArticle } from '../../cleaner'
 import { sendUrlAction, destructureContentAction, cleanArticleAction } from '../../actions/actionIndex'
-import { destructureUrl, authorize } from '../../api'
+import { destructureUrl, bbbRating } from '../../api'
 
 export class Search extends Component {
   constructor(props) {
@@ -18,16 +18,18 @@ export class Search extends Component {
 
   handleClick = async () => {
     const url = this.state.input
-    //this.props.sendUrl(url)
-
     const response = await destructureUrl(url)
-    //this.props.sendContent(response)
-
-   //console.log('response, ', response)
     const cleaned = cleanArticle(response)
-    this.props.sendCleanArticle(cleaned)
 
-    authorize()
+    this.props.sendCleanArticle(cleaned)
+    this.getOrganization()
+  }
+
+  getOrganization = async () => {
+    const organization = this.props.cleanArticle.siteName
+    const orgData = await bbbRating(organization)
+
+    console.log('orgData: ', orgData)
   }
 
   render() {
@@ -46,10 +48,14 @@ export class Search extends Component {
   }
 }
 
+const mapState = (state) => ({
+  cleanArticle: state.cleanArticle
+})
+
 const mapDispatch = (dispatch) => ({
   //sendUrl: (url) => dispatch(sendUrlAction(url)),
   //sendContent: (content) => dispatch(destructureContentAction(content)),
   sendCleanArticle: (article) => dispatch(cleanArticleAction(article)),
 })
 
-export default connect(null, mapDispatch)(Search)
+export default connect(mapState, mapDispatch)(Search)
