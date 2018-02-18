@@ -7,14 +7,13 @@ export const destructureUrl = async (url) => {
 
     return await response.json()
   } catch (error) {
-    console.log('error')
     return error
   }
 }
 
 export const bbbRating = async(organization) => {
   console.log('org: ', organization)
-  const url = `https://api.bbb.org/api/orgs/search?primaryOrganizationName=${organization}`
+  const url = `https://api.bbb.org/api/orgs/search?organizationNameExact=${organization}`
   const response = await fetch(url, {
     method: 'GET',
     headers: {

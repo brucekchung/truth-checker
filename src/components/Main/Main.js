@@ -1,9 +1,17 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+
+//components:
+import { Methods } from '../Methods/Methods'
+import { About } from '../About/About'
 import Result from '../Result/Result'
+import Search from '../Search/Search'
 
 export const Main = () => (
-  <Switch>
-    <Route exact path='/' component={Result} />
-  </Switch>
+  <div>
+    <Route path='/' component={ Search } />
+    <Route exact path='/' component={ About } />
+    <Route exact path='/result' component={ Result } />
+    <Route exact path='/methods' component={ Methods } />
+  </div>
 )

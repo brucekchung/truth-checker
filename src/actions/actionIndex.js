@@ -17,3 +17,8 @@ export const errorAction = (error) => ({
   type: 'ERROR',
   payload: error
 })
+
+export const ratingAction = (rating) => ({
+  type: 'RATING',
+  payload: rating
+})

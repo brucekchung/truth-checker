@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import './App.css'
 
 //components
-import Search from '../Search/Search'
 import { Main } from '../Main/Main'
 
 export class App extends Component {
@@ -13,7 +12,6 @@ export class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Truth-check</h1>
         </header>
-        <Search />
         <Main />
       </div>
     )

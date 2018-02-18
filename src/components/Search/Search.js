@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { cleanArticle } from '../../cleaner'
-import { cleanArticleAction, errorAction } from '../../actions/actionIndex'
+import { siteRating } from '../../helper'
+import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating } from '../../api'
 import './Search.css'
 
@@ -22,7 +23,6 @@ export class Search extends Component {
     const response = await destructureUrl(url)
 
     if (response.errorCode) {
-      console.log('error is: ', response)
       this.props.sendError(response)
 
     } else {
@@ -30,15 +30,25 @@ export class Search extends Component {
 
       this.props.sendCleanArticle(cleaned)
       this.props.sendError(null)
-      this.getOrganization()
+      this.getRating()
     }
+
+    this.props.history.push('./result')
   }
 
-  getOrganization = async () => {
+  getRating = async () => {
     const organization = this.props.cleanArticle.siteName
     const orgData = await bbbRating(organization)
+    const websiteRating = siteRating(orgData.SearchResults)
 
-    console.log('orgData: ', orgData)
+    this.props.sendRating(
+      {
+        website: websiteRating,
+        author: null,
+        article: null,
+        currency: null,
+      }
+    )
   }
 
   render() {
@@ -63,6 +73,7 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => ({
   sendError: (error) => dispatch(errorAction(error)),
+  sendRating: (rating) => dispatch(ratingAction(rating)),
   sendCleanArticle: (article) => dispatch(cleanArticleAction(article)),
 })
 
