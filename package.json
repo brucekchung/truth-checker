@@ -11,7 +11,9 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "url-clean": "^1.0.2",
+    "watson-developer-cloud": "^3.0.6"
   },
   "scripts": {
     "start-js": "react-scripts start",
@@ -24,6 +26,7 @@
     "eject": "react-scripts eject",
     "lint": "./node_modules/eslint/bin/eslint.js ./src/*/*/*.js"
   },
+  "proxy": "http://localhost:3001/",
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

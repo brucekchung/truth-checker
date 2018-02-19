@@ -24,3 +24,15 @@ export const bbbRating = async(organization) => {
 
   return await response.json()
 }
+
+export const getToken = async () => {
+  console.log('token call')
+  const response = await fetch('/token', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+
+  return await response.json()
+}
