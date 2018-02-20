@@ -25,13 +25,18 @@ export const bbbRating = async(organization) => {
   return await response.json()
 }
 
-export const getToken = async () => {
-  console.log('token call')
-  const response = await fetch('/token', {
-    method: 'GET',
+export const getToneAnalysis = async (articleText) => {
+  const requestObj = {
+    tone_input: articleText,
+    content_type: 'text/plain',
+  }
+
+  const response = await fetch('/', {
+    method: 'POST',
+    body: JSON.stringify(requestObj),
     headers: {
       'Content-Type': 'application/json',
-    }
+    },
   })
 
   return await response.json()

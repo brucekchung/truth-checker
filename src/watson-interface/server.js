@@ -1,37 +1,27 @@
 const express = require('express');
 const app = express();
-
+const user = require('../user')
 const watson = require('watson-developer-cloud')
 const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3')
+const toneAnalyzer = new ToneAnalyzerV3(user)
+const bodyParser = require('body-parser')
+//nodemon - will constantly refresh
+
+app.use(bodyParser.json())
 
 app.listen(3001, () => {
-  console.log('Watson-interface running on localhost:3001');
-});
-
-app.get('/token', (request, response) => {
-
-  response.status(200).json({"name": "Bruce"})
+  console.log('Watson-interface running on localhost:3001')
 })
 
-// const toneAnalyzer = new ToneAnalyzerV3({
-//   username: 'brucekchung@gmail.com',
-//   password: 'Ecurb1987!',
-//   version_date: '2017-09-21'
-// })
+app.post('/', (request, response) => {
+  const params = request.body
 
-// const params = {
-//   'tone_input': require('tone.json'),
-//   'content_type': 'application/json'
-// }
+  toneAnalyzer.tone(params, (error, res) => {
+    if (error) {
+      console.log('error:', error)
+    } else {
+      return response.status(200).send(res)
+    }
+  })
+})
 
-// toneAnalyzer.tone(params, function(error, response) {
-//   if (error)
-//     console.log('error:', error)
-//   else
-//     console.log(JSON.stringify(response, null, 2))
-//   }
-// )
-//sdk
-
-//find key
-//const = username, 
