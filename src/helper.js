@@ -1,7 +1,5 @@
 
 export const siteRating = (site) => {
-  console.log('received sites: ', site.length)
-
   if (!site.length) {
     return 'no matches found'
 

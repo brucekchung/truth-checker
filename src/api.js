@@ -25,7 +25,7 @@ export const bbbRating = async(organization) => {
   return await response.json()
 }
 
-export const getToneAnalysis = async (articleText) => {
+export const watsonToneAnalysis = async (articleText) => {
   const requestObj = {
     tone_input: articleText,
     content_type: 'text/plain',
@@ -39,7 +39,7 @@ export const getToneAnalysis = async (articleText) => {
     },
   })
 
-  return response
+  return response.json()
 }
 
 export const googleAuthor = async (author) => {
