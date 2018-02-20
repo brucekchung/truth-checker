@@ -31,7 +31,7 @@ export const getToneAnalysis = async (articleText) => {
     content_type: 'text/plain',
   }
 
-  const response = await fetch('/', {
+  const response = await fetch('/toneAnalyzer', {
     method: 'POST',
     body: JSON.stringify(requestObj),
     headers: {
@@ -43,7 +43,7 @@ export const getToneAnalysis = async (articleText) => {
 }
 
 export const googleAuthor = async (author) => {
-  const response = await fetch('/post', {
+  const response = await fetch('/googleAuthor', {
     method: 'POST',
     body: JSON.stringify({name: author}),
     headers: {
@@ -51,5 +51,5 @@ export const googleAuthor = async (author) => {
     },
   })
 
-  return response
+  return response.json()
 }
