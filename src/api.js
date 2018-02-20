@@ -39,7 +39,7 @@ export const getToneAnalysis = async (articleText) => {
     },
   })
 
-  return await response.json()
+  return response
 }
 
 export const googleAuthor = async (author) => {

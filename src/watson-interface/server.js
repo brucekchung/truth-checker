@@ -14,10 +14,6 @@ app.listen(3001, () => {
   console.log('Watson-interface running on localhost:3001')
 })
 
-app.get('/', (request, response) => {
-  response.send('WE CAN DO WHATEVER WE WANt!')
-})
-
 app.post('/toneAnalyzer', (request, response) => {
   const params = request.body
 
@@ -30,16 +26,15 @@ app.post('/toneAnalyzer', (request, response) => {
   })
 })
 
-app.post('/googleAuthor', (request, response) => {
-  const author = request.body.name
-  console.log('author: ', author)
+app.post('/googleAuthor', async (request, response) => {
+  try {
+    const author = request.body.name
+    const result = await scholar.search(author)
 
-  scholar.search(author, (error, res) => {
-    if (error) {
-      console.log('error:', error)
-    } else {
-      return response.status(200).send(res)
-    }
-  })
+    return response.status(200).send(result)
+
+  } catch(error) {
+    console.error(error)
+  } 
 })
 
