@@ -14,7 +14,11 @@ app.listen(3001, () => {
   console.log('Watson-interface running on localhost:3001')
 })
 
-app.post('/', (request, response) => {
+app.get('/', (request, response) => {
+  response.send('WE CAN DO WHATEVER WE WANt!')
+})
+
+app.post('/toneAnalyzer', (request, response) => {
   const params = request.body
 
   toneAnalyzer.tone(params, (error, res) => {
@@ -26,7 +30,7 @@ app.post('/', (request, response) => {
   })
 })
 
-app.post('/search', (request, response) => {
+app.post('/googleAuthor', (request, response) => {
   const author = request.body.name
   console.log('author: ', author)
 
