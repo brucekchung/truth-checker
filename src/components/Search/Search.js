@@ -5,6 +5,7 @@ import { siteRating } from '../../helper'
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating } from '../../api'
 import './Search.css'
+import cleanUrl from 'url-clean'
 
 export class Search extends Component {
   constructor(props) {
@@ -19,8 +20,11 @@ export class Search extends Component {
   }
 
   handleClick = async () => {
-    const url = this.state.input
+    const url = cleanUrl(this.state.input)
     const response = await destructureUrl(url)
+
+    console.log('url: ', this.state.input)
+    console.log('cleaned: ', url)
 
     if (response.errorCode) {
       this.props.sendError(response)
@@ -34,6 +38,7 @@ export class Search extends Component {
     }
 
     this.props.history.push('./result')
+    this.setState({input: ''})
   }
 
   getRating = async () => {
