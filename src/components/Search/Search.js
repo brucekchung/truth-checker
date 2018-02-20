@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { cleanArticle } from '../../cleaner'
 import { siteRating } from '../../helper'
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
-import { destructureUrl, bbbRating } from '../../api'
+import { destructureUrl, bbbRating, googleAuthor } from '../../api'
 import './Search.css'
 import cleanUrl from 'url-clean'
 
@@ -39,6 +39,12 @@ export class Search extends Component {
 
     this.props.history.push('./result')
     this.setState({input: ''})
+  }
+
+  componentDidMount = async () => {
+
+    const stuff = await googleAuthor('Robert Fisk')
+    console.log('author: ', stuff)
   }
 
   getRating = async () => {

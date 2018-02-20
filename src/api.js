@@ -41,3 +41,15 @@ export const getToneAnalysis = async (articleText) => {
 
   return await response.json()
 }
+
+export const googleAuthor = async (author) => {
+  const response = await fetch('/post', {
+    method: 'POST',
+    body: JSON.stringify({name: author}),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  return response
+}
