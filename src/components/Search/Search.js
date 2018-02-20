@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { cleanArticle } from '../../cleaner'
+import { cleanArticle, cleanWatsonAnalysis, cleanAuthor } from '../../cleaner'
 import { siteRating } from '../../helper'
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
-import { destructureUrl, bbbRating, googleAuthor } from '../../api'
+import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../../api'
 import './Search.css'
 import cleanUrl from 'url-clean'
 
@@ -41,25 +41,33 @@ export class Search extends Component {
     this.setState({input: ''})
   }
 
-  componentDidMount = async () => {
-
-    const stuff = await googleAuthor('Robert Fisk')
-    console.log('author: ', stuff)
-  }
-
   getRating = async () => {
     const organization = this.props.cleanArticle.siteName
-    const orgData = await bbbRating(organization)
-    const websiteRating = siteRating(orgData.SearchResults)
+    const articleText = this.props.cleanArticle.text
+    const author = this.props.cleanArticle.author
+    // running all async elements at once:
+    const orgData = bbbRating(organization)
+    const watsonAnalysis = watsonToneAnalysis(articleText)
+    const authorData = author ? googleAuthor(author) : 'none'
+    // waiting to resolve all:
+    const ready = await Promise.all([orgData, watsonAnalysis, authorData])
 
-    this.props.sendRating(
-      {
-        website: websiteRating,
-        author: null,
-        article: null,
-        currency: null,
-      }
-    )
+    if (ready) {
+      // console.log('ready: ', ready)
+      const websiteRating = siteRating(ready[0].SearchResults)
+      const articleRating = cleanWatsonAnalysis(ready[1])
+      const authorRating = ready[2] === 'none' ? 'none' : cleanAuthor(ready[2])
+
+      this.props.sendRating(
+        {
+          website: websiteRating,
+          author: authorRating,
+          article: articleRating,
+          currency: null,
+        }
+      )
+    }
+
   }
 
   render() {

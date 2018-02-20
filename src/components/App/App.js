@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getToneAnalysis } from '../../api'
+//import { getToneAnalysis } from '../../api'
 import './App.css'
 
 //components

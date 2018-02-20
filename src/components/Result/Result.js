@@ -28,6 +28,7 @@ export const Result = ({ error, cleanArticle }) => {
     return (
       <div>
         <p>example url: </p>
+        <p>https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade</p>
         <p>https://www.cnn.com/travel/article/passenger-planes-future-look/index.html</p>
         <p>http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html</p>
         <p>https://www.washingtonpost.com/?utm_term=.4205470b3748</p>
