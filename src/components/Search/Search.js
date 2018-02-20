@@ -53,7 +53,6 @@ export class Search extends Component {
     const ready = await Promise.all([orgData, watsonAnalysis, authorData])
 
     if (ready) {
-      // console.log('ready: ', ready)
       const websiteRating = siteRating(ready[0].SearchResults)
       const articleRating = cleanWatsonAnalysis(ready[1])
       const authorRating = ready[2] === 'none' ? 'none' : cleanAuthor(ready[2])
@@ -67,7 +66,6 @@ export class Search extends Component {
         }
       )
     }
-
   }
 
   render() {
