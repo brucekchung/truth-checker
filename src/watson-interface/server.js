@@ -19,7 +19,7 @@ app.post('/toneAnalyzer', (request, response) => {
 
   toneAnalyzer.tone(params, (error, res) => {
     if (error) {
-      console.log('error:', error)
+      console.error(error)
     } else {
       return response.status(200).send(res)
     }

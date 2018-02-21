@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { cleanArticle, cleanWatsonAnalysis, cleanAuthor, cleanSiteRating } from '../../cleaner'
-//import { siteRating } from '../../helper'
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../../api'
 import './Search.css'
