@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { combinedScore } from '../../helper.js'
 
-export const Result = ({ error, cleanArticle }) => {
-
+export const Result = ({ error, cleanArticle, rating }) => {
   if (error) {
     return (
       <div>
@@ -11,23 +11,49 @@ export const Result = ({ error, cleanArticle }) => {
         <p>error message: {error.error}</p>
       </div>
     )
+
   } else if (cleanArticle) {
-    const { title, type, author, date, siteName, text} = cleanArticle
+    const {title, type, author, date, siteName, text} = cleanArticle
+
     return (
       <div>
-        <p>title: {title}</p>
-        <p>type: {type}</p>
-        <p>author: {author}</p>
-        <p>date: {date}</p>
-        <p>siteName: {siteName}</p>
-        <p>text: {text}</p>
+        {
+          !rating &&
+          <h2>Rating: Pending</h2>
+        }
+
+        {
+          rating &&
+          <div className="result-info">
+            <h2>Rating: {combinedScore(rating)}</h2>
+            <h3>Organization: {rating.website}</h3>
+            <h3>Author: search {rating.author.searchLength}</h3>
+            <h3>
+              Content: 
+              anger {rating.article.anger}, 
+              fear {rating.article.fear}, 
+              analytical {rating.article.analytical}
+            </h3>
+          </div>
+        }
+
+        <div className="article-info">
+          <p>title: {title}</p>
+          <p>type: {type}</p>
+          <p>author: {author}</p>
+          <p>date: {date}</p>
+          <p>site name: {siteName}</p>
+          <p>text: {text}</p>
+        </div>
       </div>
     )
+
   } else {
-    //return null later
+    //return null or keep page? can fine tune examples
     return (
       <div>
         <p>example url: </p>
+        <p>https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400</p>
         <p>https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade</p>
         <p>https://www.cnn.com/travel/article/passenger-planes-future-look/index.html</p>
         <p>http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html</p>
@@ -44,6 +70,7 @@ export const Result = ({ error, cleanArticle }) => {
 const mapState = (state) => ({
   error: state.error,
   cleanArticle: state.cleanArticle,
+  rating: state.rating,
 })
 
 export default connect(mapState)(Result)

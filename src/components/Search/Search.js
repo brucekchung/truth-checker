@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { cleanArticle, cleanWatsonAnalysis, cleanAuthor } from '../../cleaner'
-import { siteRating } from '../../helper'
+import { cleanArticle, cleanWatsonAnalysis, cleanAuthor, cleanSiteRating } from '../../cleaner'
+//import { siteRating } from '../../helper'
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../../api'
 import './Search.css'
@@ -53,7 +53,7 @@ export class Search extends Component {
     const ready = await Promise.all([orgData, watsonAnalysis, authorData])
 
     if (ready) {
-      const websiteRating = siteRating(ready[0].SearchResults)
+      const websiteRating = cleanSiteRating(ready[0].SearchResults)
       const articleRating = cleanWatsonAnalysis(ready[1])
       const authorRating = ready[2] === 'none' ? 'none' : cleanAuthor(ready[2])
 
@@ -62,7 +62,6 @@ export class Search extends Component {
           website: websiteRating,
           author: authorRating,
           article: articleRating,
-          currency: null,
         }
       )
     }
