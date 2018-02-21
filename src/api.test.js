@@ -4,8 +4,8 @@ import {
   bbbRating, 
   watsonToneAnalysis, 
   googleAuthor
-} from './api';
-import { key } from './apiKey';
+} from './api'
+import { key } from './apiKey'
 //create and import mock data
 
 describe('api calls', () => {

@@ -53,7 +53,6 @@ export const cleanSiteRating = (site) => {
     const separate = split[1].split('.')
     const rating = separate[0]
 
-    console.log('rating: ', rating)
     return rating ? rating : 'no rating'
   }
 }
