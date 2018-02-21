@@ -1,4 +1,3 @@
-
 export const combinedScore = (ratingObj) => {
   const { website, author, article } = ratingObj
   

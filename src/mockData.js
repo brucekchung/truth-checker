@@ -34,5 +34,17 @@ export const mock = {
     {
       RatingIcons: [{Url: "http://www.bbb.org/ratingicons/lg-A+.png", DeviceType: "web"}]
     }
-  ]
+  ],
+  rating: {
+    website: 'A+',
+    author: {searchLength: 1300},
+    article: {neutral: 0.4}
+  }
+}
+
+export const mockApiData = {
+  url: {
+    author: 'Bruce',
+    text: 'stuff'
+  }
 }

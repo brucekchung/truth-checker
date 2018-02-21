@@ -1,28 +1,45 @@
 import { dbKey, bbbKey } from './apiKey'
 
 export const destructureUrl = async (url) => {
+  const diffBot = `https://api.diffbot.com/v3/analyze?token=${dbKey}&url=${url}`
+  
   try {
-    const diffBot = `https://api.diffbot.com/v3/analyze?token=${dbKey}&url=${url}`
     const response = await fetch(diffBot)
-
-    return await response.json()
+    
+    if (response.status < 300) {
+     return await response.json()
+    
+    } else {
+      throw new Error ('could not fetch diffbot')
+    }
+  
   } catch (error) {
-    return error
+    throw error //previously return error
   }
 }
 
 export const bbbRating = async(organization) => {
-  console.log('org: ', organization)
   const url = `https://api.bbb.org/api/orgs/search?organizationNameExact=${organization}`
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${bbbKey}`
-    }
-  })
+  
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bbbKey}`
+      }
+    })
 
-  return await response.json()
+    if (response.status < 300) {
+      return await response.json()
+
+    } else {
+      throw new Error ('could not get bbb rating')
+    }
+  
+  } catch (error) {
+    throw error
+  }
 }
 
 export const watsonToneAnalysis = async (articleText) => {
@@ -31,25 +48,44 @@ export const watsonToneAnalysis = async (articleText) => {
     content_type: 'text/plain',
   }
 
-  const response = await fetch('/toneAnalyzer', {
-    method: 'POST',
-    body: JSON.stringify(requestObj),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
+  try {
+    const response = await fetch('/toneAnalyzer', {
+      method: 'POST',
+      body: JSON.stringify(requestObj),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
 
-  return response.json()
+    if (response.status < 300) {
+      return response.json()
+
+    } else {
+      throw new Error ('could not get watson analysis')
+    }
+
+  } catch (error) {
+    throw (error)
+  }
 }
 
 export const googleAuthor = async (author) => {
-  const response = await fetch('/googleAuthor', {
-    method: 'POST',
-    body: JSON.stringify({name: author}),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
+  try {
+    const response = await fetch('/googleAuthor', {
+      method: 'POST',
+      body: JSON.stringify({name: author}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
 
-  return response.json()
+    if (response.status < 300) {
+      return response.json()
+      
+    } else {
+      throw new Error ('could not get googleAuthor data')
+    } 
+  } catch (error) {
+    throw error
+  }
 }
