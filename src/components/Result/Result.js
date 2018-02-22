@@ -67,7 +67,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
   }
 }
 
-const mapState = (state) => ({
+export const mapState = (state) => ({
   error: state.error,
   cleanArticle: state.cleanArticle,
   rating: state.rating,

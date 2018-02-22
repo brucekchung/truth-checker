@@ -48,3 +48,11 @@ export const mockApiData = {
     text: 'stuff'
   }
 }
+
+export const mockState = {
+  result: {
+    error: 'stuff',
+    cleanArticle: 'stuff',
+    rating: 'A+'
+  },
+}
