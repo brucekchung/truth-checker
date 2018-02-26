@@ -10,7 +10,7 @@ export const About = () => (
       According to the Pew Research Center, 
       two-thirds (67%) of Americans report they get at least some of their news from social media (Aug 2017).
       Facebook leads social media sites as a news outlet and is largely uncontrolled.
-      Users can post 'fake news' and reach a large user base.  
+      Users can post &apos;fake news&apos; and reach a large user base.  
       This is a concerning issue - especially in light of reports of Russian interference in the 2016 election.
       This site attempts the first step in creating what Facebook or Twitter should do to make their user base more aware.
       The first step is being able to assess the validity of an online news article in a completely automated way by simply having access to the url.

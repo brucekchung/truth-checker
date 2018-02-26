@@ -77,7 +77,7 @@ Result.propTypes = {
 export const mapState = (state) => ({
   error: state.error,
   cleanArticle: state.cleanArticle,
-  rating: state.rating,
+  rating: state.rating
 })
 
 export default connect(mapState)(Result)
