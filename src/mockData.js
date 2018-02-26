@@ -55,4 +55,7 @@ export const mockState = {
     cleanArticle: 'stuff',
     rating: 'A+'
   },
+  search: {
+    cleanArticle: 'stuff'
+  }
 }

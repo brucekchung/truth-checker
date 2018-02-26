@@ -4,8 +4,8 @@ import { Route } from 'react-router-dom'
 //components:
 import { Methods } from '../Methods/Methods'
 import { About } from '../About/About'
-import Result from '../Result/Result'
-import Search from '../Search/Search'
+import Result from '../../containers/Result/Result'
+import Search from '../../containers/Search/Search'
 
 export const Main = () => (
   <div>

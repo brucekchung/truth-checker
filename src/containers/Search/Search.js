@@ -4,6 +4,7 @@ import { cleanArticle, cleanWatsonAnalysis, cleanAuthor, cleanSiteRating } from 
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../../api'
 import './Search.css'
+import { func, object } from 'prop-types'
 import cleanUrl from 'url-clean'
 
 export class Search extends Component {
@@ -22,8 +23,8 @@ export class Search extends Component {
     const url = cleanUrl(this.state.input)
     const response = await destructureUrl(url)
 
-    console.log('url: ', this.state.input)
-    console.log('cleaned: ', url)
+    // console.log('url: ', this.state.input)
+    // console.log('cleaned: ', url)
 
     if (response.errorCode) {
       this.props.sendError(response)
@@ -82,11 +83,18 @@ export class Search extends Component {
   }
 }
 
-const mapState = (state) => ({
+Search.propTypes = {
+  cleanArticle: object,
+  sendError: func,
+  sendRating: func,
+  sendCleanArticle: func
+}
+
+export const mapState = (state) => ({
   cleanArticle: state.cleanArticle
 })
 
-const mapDispatch = (dispatch) => ({
+export const mapDispatch = (dispatch) => ({
   sendError: (error) => dispatch(errorAction(error)),
   sendRating: (rating) => dispatch(ratingAction(rating)),
   sendCleanArticle: (article) => dispatch(cleanArticleAction(article)),
