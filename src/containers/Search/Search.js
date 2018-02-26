@@ -15,8 +15,8 @@ export class Search extends Component {
     }
   }
 
-  handleInput = (e) => {
-    this.setState({input: e.target.value})
+  handleInput = (event) => {
+    this.setState({input: event.target.value})
   }
 
   handleClick = async () => {
@@ -61,8 +61,7 @@ export class Search extends Component {
         {
           website: websiteRating,
           author: authorRating,
-          article: articleRating,
-        }
+          article: articleRating        }
       )
     }
   }
@@ -87,7 +86,8 @@ Search.propTypes = {
   cleanArticle: object,
   sendError: func,
   sendRating: func,
-  sendCleanArticle: func
+  sendCleanArticle: func,
+  history: object
 }
 
 export const mapState = (state) => ({
@@ -97,7 +97,7 @@ export const mapState = (state) => ({
 export const mapDispatch = (dispatch) => ({
   sendError: (error) => dispatch(errorAction(error)),
   sendRating: (rating) => dispatch(ratingAction(rating)),
-  sendCleanArticle: (article) => dispatch(cleanArticleAction(article)),
+  sendCleanArticle: (article) => dispatch(cleanArticleAction(article))
 })
 
 export default connect(mapState, mapDispatch)(Search)
