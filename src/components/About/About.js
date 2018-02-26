@@ -1,10 +1,7 @@
 import React from 'react'
 
-export const About = (asdf) => (
+export const About = () => (
   <div>
-    {
-      //console.log('about props: ', asdf)
-    }
     <h1>About</h1>
     <h4>created by</h4>
     <h2>Bruce Chung</h2>

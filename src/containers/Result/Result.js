@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { string, oneOfType, object } from 'prop-types'
 import { combinedScore } from '../../helper.js'
 
 export const Result = ({ error, cleanArticle, rating }) => {
@@ -65,6 +66,12 @@ export const Result = ({ error, cleanArticle, rating }) => {
       </div>
     )
   }
+}
+
+Result.propTypes = {
+  error: object,
+  cleanArticle: object,
+  rating: oneOfType([object, string])
 }
 
 export const mapState = (state) => ({
