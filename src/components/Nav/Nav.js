@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 import './Nav.css'
 
 export const Nav = () => (
-  <div className='Nav'>
-    <NavLink to='/'>About</NavLink>
-    <NavLink to='/Methods'>Methods</NavLink>
-    <NavLink to='/Result'>Result</NavLink>
+  <div className='Navi'>
+    <NavLink className="Nav" to='/'>About</NavLink>
+    <NavLink className="Nav" to='/Methods'>Methods</NavLink>
+    <NavLink className="Nav" to='/Result'>Result</NavLink>
   </div>
 )

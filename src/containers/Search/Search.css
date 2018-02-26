@@ -1,7 +1,26 @@
 .Search input {
-  width: 50%;
+  border: none;
+  height: 20px;
+  color: white;
+  background: #88b4cb;
+  width: 60%;
 }
 
 .Search {
-  background: grey;
+  padding-bottom: 28px;
+  background: #131313;
+}
+
+.Search button {
+  border: none;
+  height: 22px;
+  width: 100px;
+  padding: 0px 12px 0px 12px;
+  color: white;
+  background: #3a5e71;
+}
+
+.Search button:hover {
+  cursor: pointer;
+  background: #5ba1c6;
 }

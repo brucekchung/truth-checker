@@ -31,7 +31,7 @@ export class Search extends Component {
 
     } else {
       const cleaned = cleanArticle(response)
-
+      console.log('props: ', this.props)
       this.props.sendCleanArticle(cleaned)
       this.props.sendError(null)
       this.getRating()
@@ -61,7 +61,8 @@ export class Search extends Component {
         {
           website: websiteRating,
           author: authorRating,
-          article: articleRating        }
+          article: articleRating
+        }
       )
     }
   }
