@@ -6,13 +6,8 @@
   padding-bottom: 12px;
 }
 
-.Navi a {
-/*  color: white;*/
-/*  text-decoration: none;*/
-}
-
 .Navi a:hover {
-  text-decoration: underline;
+  text-decoration: underline overline;
 }
 
 .Nav {
