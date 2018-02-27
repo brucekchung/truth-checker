@@ -4,11 +4,14 @@
   color: white;
   background: #88b4cb;
   width: 60%;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .Search {
-  padding-bottom: 28px;
+  padding-top: 30px;
   background: #131313;
+  position: relative;
 }
 
 .Search button {
@@ -23,4 +26,12 @@
 .Search button:hover {
   cursor: pointer;
   background: #5ba1c6;
+}
+
+.loading-gif {
+  height: 70px;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }

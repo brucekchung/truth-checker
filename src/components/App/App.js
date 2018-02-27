@@ -4,8 +4,7 @@ import './App.css'
 //components
 import { Main } from '../Main/Main'
 import { Nav } from '../Nav/Nav'
-import Search from '../../containers/Search/Search'
-//download autofomatter
+//import Search from '../../containers/Search/Search'
 
 export class App extends Component {
   render() {
@@ -14,8 +13,6 @@ export class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Truth-check</h1>
         </header>
-        <Search />
-        <Nav />
         <Main />
       </div>
     )

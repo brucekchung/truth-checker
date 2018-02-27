@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 
 export const About = () => (
-  <div>
+  <div className="About">
     <h1>About</h1>
     <h4>created by</h4>
     <h2>Bruce Chung</h2>

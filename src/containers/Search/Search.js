@@ -6,12 +6,15 @@ import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../
 import './Search.css'
 import { func, object } from 'prop-types'
 import cleanUrl from 'url-clean'
+import { Nav } from '../../components/Nav/Nav'
+import loading from '../../assets/Infinity-loading.gif'
 
 export class Search extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      input: ''
+      input: '',
+      searching: false
     }
   }
 
@@ -31,7 +34,7 @@ export class Search extends Component {
 
     } else {
       const cleaned = cleanArticle(response)
-      console.log('props: ', this.props)
+
       this.props.sendCleanArticle(cleaned)
       this.props.sendError(null)
       this.getRating()
@@ -70,14 +73,20 @@ export class Search extends Component {
   render() {
     return (
       <div className="Search">
+        {
+          this.state.searching &&
+          <img className="loading-gif" src={loading} />
+        }
         <input
           value={this.state.input}
+          placeholder="paste URL link"
           onChange={this.handleInput}
         />
         <button
           onClick={this.handleClick}
         >CHECK
         </button>
+        <Nav />
       </div>
     )
   }
@@ -92,7 +101,8 @@ Search.propTypes = {
 }
 
 export const mapState = (state) => ({
-  cleanArticle: state.cleanArticle
+  cleanArticle: state.cleanArticle,
+  rating: state.rating
 })
 
 export const mapDispatch = (dispatch) => ({

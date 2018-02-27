@@ -1,5 +1,3 @@
-
-
 .Navi {
   display: flex;
   justify-content: space-around;
@@ -14,7 +12,7 @@
 }
 
 .Navi a:hover {
-  color: blue;
+  
 }
 
 .Nav {
