@@ -28,7 +28,6 @@ ShallowWrapper {
           </h1>
 </header>,
         <Unknown />,
-        <Unknown />,
       ],
       "className": "App",
     },
@@ -70,15 +69,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -98,7 +88,6 @@ ShallowWrapper {
                         Truth-check
             </h1>
 </header>,
-          <Unknown />,
           <Unknown />,
         ],
         "className": "App",
@@ -131,15 +120,6 @@ ShallowWrapper {
             "type": "h1",
           },
           "type": "header",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
         Object {
           "instance": null,

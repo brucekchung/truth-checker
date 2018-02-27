@@ -37,6 +37,7 @@ ShallowWrapper {
           stuff
 </p>,
       ],
+      "className": "Result",
     },
     "ref": null,
     "rendered": Array [
@@ -107,6 +108,7 @@ ShallowWrapper {
             stuff
 </p>,
         ],
+        "className": "Result",
       },
       "ref": null,
       "rendered": Array [
@@ -218,6 +220,7 @@ ShallowWrapper {
           https://www.rd.com/advice/parenting/stop-bullying-strategy/
 </p>,
       ],
+      "className": "Result",
     },
     "ref": null,
     "rendered": Array [
@@ -372,6 +375,7 @@ ShallowWrapper {
             https://www.rd.com/advice/parenting/stop-bullying-strategy/
 </p>,
         ],
+        "className": "Result",
       },
       "ref": null,
       "rendered": Array [

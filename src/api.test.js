@@ -33,11 +33,18 @@ describe('api calls', () => {
     expect(result).rejects.toEqual(Error('could not fetch diffbot'))
   })
 
-  it('bbbRating should make a fetch request with the correct parameters', () => {
-    const organization = 'CNN Travel'
+  it('bbbRating calls fetch with the correct parameters', () => {
+    const expectedUrl = `https://api.bbb.org/api/orgs/search?organizationNameExact=CNN Travel`
+    const expectedFetchBody = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bbbKey}`
+      }
+    }
 
-    bbbRating(organization)
-    expect(window.fetch).toHaveBeenCalled()
+    bbbRating('CNN Travel')
+    expect(window.fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchBody)
   })
 
   it('bbbRating should return a error if the fetch fails', () => {
@@ -51,10 +58,22 @@ describe('api calls', () => {
   })
 
   it('watsonToneAnalysis should be called with the correct parameters', () => {
-    const text = 'testing and testing and testing'
+    const expectedUrl = '/toneAnalyzer'
+    const articleText = 'example string to analyze'
+    const requestObj = {
+      tone_input: articleText,
+      content_type: 'text/plain',
+    }
+    const expectedFetchBody = {
+      method: 'POST',
+      body: JSON.stringify(requestObj),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
 
-    watsonToneAnalysis(text)
-    expect(window.fetch).toHaveBeenCalled()
+    watsonToneAnalysis(articleText)
+    expect(window.fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchBody)
   })
 
   it('watsonToneAnalysis should return an error if the fetch fails', () => {
@@ -68,10 +87,17 @@ describe('api calls', () => {
   })
 
   it('googleAuthor should call fetch with the correct parameters', () => {
-    const author = 'Brophus'
+    const expectedUrl = '/googleAuthor'
+    const expectedFetchBody = {
+      method: 'POST',
+      body: JSON.stringify({name: 'Orson Scott Card'}),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
 
-    googleAuthor(author)
-    expect(window.fetch).toHaveBeenCalled()
+    googleAuthor('Orson Scott Card')
+    expect(window.fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchBody)
   })
 
   it('googleAuthor should throw an error if the fetch fails', () => {
@@ -83,13 +109,3 @@ describe('api calls', () => {
     expect(result).rejects.toEqual(Error('could not get googleAuthor data'))
   })
 })
-
-
-
-
-
-
-
-
-
-
