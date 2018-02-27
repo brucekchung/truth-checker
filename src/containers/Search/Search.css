@@ -8,6 +8,10 @@
   margin-top: 30px;
 }
 
+.Search input:focus { 
+  outline: none;
+}
+
 .Search {
   padding-top: 30px;
   background: #131313;
