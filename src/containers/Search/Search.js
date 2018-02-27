@@ -23,6 +23,11 @@ export class Search extends Component {
   }
 
   handleClick = async () => {
+    this.setState({
+      input: '',
+      searching: true
+    })
+
     const url = cleanUrl(this.state.input)
     const response = await destructureUrl(url)
 
@@ -41,7 +46,6 @@ export class Search extends Component {
     }
 
     this.props.history.push('./result')
-    this.setState({input: ''})
   }
 
   getRating = async () => {
@@ -67,6 +71,12 @@ export class Search extends Component {
           article: articleRating
         }
       )
+    }
+  }
+
+  componentDidUpdate() {
+    if(this.props.rating && this.state.searching) {
+      this.setState({searching: false})
     }
   }
 
