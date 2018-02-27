@@ -75,6 +75,8 @@ export class Search extends Component {
   }
 
   componentDidUpdate() {
+    console.log('CDU: ', this.state.searching, this.props.rating)
+    //set a property of rating and compare?
     if(this.props.rating && this.state.searching) {
       this.setState({searching: false})
     }

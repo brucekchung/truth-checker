@@ -21,6 +21,8 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
+          className="Nav"
+          exact={true}
           to="/"
 >
           About
@@ -28,6 +30,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
+          className="Nav"
           to="/Methods"
 >
           Methods
@@ -35,12 +38,13 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
+          className="Nav"
           to="/Result"
 >
           Result
 </NavLink>,
       ],
-      "className": "Nav",
+      "className": "Navi",
     },
     "ref": null,
     "rendered": Array [
@@ -52,6 +56,8 @@ ShallowWrapper {
           "activeClassName": "active",
           "ariaCurrent": "true",
           "children": "About",
+          "className": "Nav",
+          "exact": true,
           "to": "/",
         },
         "ref": null,
@@ -66,6 +72,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "ariaCurrent": "true",
           "children": "Methods",
+          "className": "Nav",
           "to": "/Methods",
         },
         "ref": null,
@@ -80,6 +87,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "ariaCurrent": "true",
           "children": "Result",
+          "className": "Nav",
           "to": "/Result",
         },
         "ref": null,
@@ -99,6 +107,8 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
+            className="Nav"
+            exact={true}
             to="/"
 >
             About
@@ -106,6 +116,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
+            className="Nav"
             to="/Methods"
 >
             Methods
@@ -113,12 +124,13 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
+            className="Nav"
             to="/Result"
 >
             Result
 </NavLink>,
         ],
-        "className": "Nav",
+        "className": "Navi",
       },
       "ref": null,
       "rendered": Array [
@@ -130,6 +142,8 @@ ShallowWrapper {
             "activeClassName": "active",
             "ariaCurrent": "true",
             "children": "About",
+            "className": "Nav",
+            "exact": true,
             "to": "/",
           },
           "ref": null,
@@ -144,6 +158,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "ariaCurrent": "true",
             "children": "Methods",
+            "className": "Nav",
             "to": "/Methods",
           },
           "ref": null,
@@ -158,6 +173,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "ariaCurrent": "true",
             "children": "Result",
+            "className": "Nav",
             "to": "/Result",
           },
           "ref": null,

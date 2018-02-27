@@ -9,7 +9,11 @@ import { dbKey, bbbKey } from './apiKey'
 import { mockApiData } from './mockData'
 
 describe('api calls', () => {
+  let wrapper
+
   beforeEach(() => {
+    wrapper = 
+
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve(mockApiData.url)
@@ -39,6 +43,33 @@ describe('api calls', () => {
     bbbRating(organization)
     expect(window.fetch).toHaveBeenCalled()
   })
+
+  it('bbbRating calls fetch with the correct data', () => {
+    const expectedFetchBody = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bbbKey}`
+      }
+    }
+
+  })
+
+//   // AddGroceryForm.test.js
+
+// it('calls fetch with the correct data when adding a new grocery', () => {
+//   const expectedFetchBody = {
+//     method: 'POST',
+//     body: JSON.stringify({ grocery: mockGrocery }),
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   }
+
+//   renderedComponent.setState({grocery: mockGrocery})
+//   renderedComponent.instance().handleAddGrocery(mockEvent)
+//   expect(window.fetch).toHaveBeenCalledWith('/api/v1/groceries', expectedFetchBody)
+// })
 
   it('bbbRating should return a error if the fetch fails', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({

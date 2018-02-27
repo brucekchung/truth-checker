@@ -18,8 +18,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        false,
         <input
           onChange={[Function]}
+          placeholder="paste URL link"
           value=""
 />,
         <button
@@ -27,17 +29,20 @@ ShallowWrapper {
 >
           CHECK
 </button>,
+        <Unknown />,
       ],
       "className": "Search",
     },
     "ref": null,
     "rendered": Array [
+      false,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "onChange": [Function],
+          "placeholder": "paste URL link",
           "value": "",
         },
         "ref": null,
@@ -56,6 +61,15 @@ ShallowWrapper {
         "rendered": "CHECK",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -66,8 +80,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          false,
           <input
             onChange={[Function]}
+            placeholder="paste URL link"
             value=""
 />,
           <button
@@ -75,17 +91,20 @@ ShallowWrapper {
 >
             CHECK
 </button>,
+          <Unknown />,
         ],
         "className": "Search",
       },
       "ref": null,
       "rendered": Array [
+        false,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
+            "placeholder": "paste URL link",
             "value": "",
           },
           "ref": null,
@@ -103,6 +122,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": "CHECK",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",
