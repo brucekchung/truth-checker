@@ -1,16 +1,26 @@
-
-
-.Nav {
+.Navi {
   display: flex;
   justify-content: space-around;
-  background: grey;
+  background: #535252;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.Nav a {
+.Navi a {
+/*  color: white;*/
+/*  text-decoration: none;*/
+}
+
+.Navi a:hover {
+  text-decoration: underline;
+}
+
+.Nav {
   color: white;
   text-decoration: none;
 }
 
-.Nav a:hover {
-  color: blue;
+.active {
+  color: #88b4cc;
 }
+

@@ -1,7 +1,37 @@
 .Search input {
-  width: 50%;
+  border: none;
+  height: 20px;
+  color: white;
+  background: #88b4cb;
+  width: 60%;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .Search {
-  background: grey;
+  padding-top: 30px;
+  background: #131313;
+  position: relative;
+}
+
+.Search button {
+  border: none;
+  height: 22px;
+  width: 100px;
+  padding: 0px 12px 0px 12px;
+  color: white;
+  background: #3a5e71;
+}
+
+.Search button:hover {
+  cursor: pointer;
+  background: #5ba1c6;
+}
+
+.loading-gif {
+  height: 70px;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
