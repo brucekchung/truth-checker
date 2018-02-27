@@ -1,7 +1,8 @@
 import React from 'react'
+import './Methods.css'
 
 export const Methods = () => (
-  <div>
+  <div className="Methods">
     <h1>Methods</h1>
     <p>Categories of Evaluation: </p>
     <p>Organization, Author, and Content</p>

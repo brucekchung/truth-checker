@@ -45,7 +45,10 @@ export const Result = ({ error, cleanArticle, rating }) => {
           <p>author: {author}</p>
           <p>date: {date}</p>
           <p>site name: {siteName}</p>
-          <p>text: {text}</p>
+          <p>original text: </p>
+          <div className="original-text">
+            {text}
+          </div>
         </div>
       </div>
     )
