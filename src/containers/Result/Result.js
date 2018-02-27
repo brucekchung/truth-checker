@@ -2,11 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { string, oneOfType, object } from 'prop-types'
 import { combinedScore } from '../../helper.js'
+import './Result.css'
 
 export const Result = ({ error, cleanArticle, rating }) => {
   if (error) {
     return (
-      <div>
+      <div className="Result">
         <p>Result could not be displayed</p>
         <p>error code: {error.errorCode}</p>
         <p>error message: {error.error}</p>
@@ -17,7 +18,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
     const {title, type, author, date, siteName, text} = cleanArticle
 
     return (
-      <div>
+      <div className="Result">
         {
           !rating &&
           <h2>Rating: Pending</h2>
@@ -25,7 +26,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
 
         {
           rating &&
-          <div className="result-info">
+          <div className="result-info Result">
             <h2>Rating: {combinedScore(rating)}</h2>
             <h3>Organization: {rating.website}</h3>
             <h3>Author: search {rating.author.searchLength}</h3>
@@ -38,7 +39,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
           </div>
         }
 
-        <div className="article-info">
+        <div className="article-info Result">
           <p>title: {title}</p>
           <p>type: {type}</p>
           <p>author: {author}</p>
@@ -52,7 +53,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
   } else {
     //return null or keep page? can fine tune examples
     return (
-      <div>
+      <div className="Result">
         <p>example url: </p>
         <p>https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400</p>
         <p>https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade</p>
