@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Search, mapState, mapDispatch } from './Search'
 import { mockState } from '../../mockData'
+import * as apiCalls from '../../api'
 
 describe('Search', () => {
   let wrapper
@@ -32,11 +33,35 @@ describe('Search', () => {
     expect(mockDispatch).toHaveBeenCalled()
   })
 
-  it.skip('handleClick should setState', () => {
+  it('handleClick should setState', () => {
+    wrapper.instance().parseArticle = jest.fn()
     wrapper.instance().handleClick()
 
     expect(wrapper.instance().state.searching).toEqual(true)
   })
+
+  it('parseArticle should call destructureUrl', () => {
+    apiCalls.destructureUrl = jest.fn().mockImplementation(() => Promise.resolve({
+        response: 'article destructured'
+    }))
+    wrapper.instance().sendArticle = jest.fn()
+
+    wrapper.instance().parseArticle()
+    expect(apiCalls.destructureUrl).toHaveBeenCalled()
+  })
+
+  it.skip('parseArticle should send an Error if the response has an error code', () => {
+    const mockFunction = jest.fn()
+    wrapper = shallow(<Search sendError={mockFunction}/>)
+
+    apiCalls.destructureUrl = jest.fn().mockImplementation(() => Promise.resolve({
+        errorCode: 404
+    }))
+    wrapper.instance().sendArticle = jest.fn()
+
+    wrapper.instance().parseArticle()
+    expect(mockFunction).toHaveBeenCalled()
+  }) 
 
   it.skip('handleClick should do many things', () => {
     //cleans and destructures url
@@ -46,6 +71,8 @@ describe('Search', () => {
     //calls this.getRating
     //pushes to result component
   })
+
+
 
   it('handleInput should setState based on the input', () => {
     const event = {target: {value: 'stuff'}}

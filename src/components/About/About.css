@@ -1,6 +1,7 @@
 .About p {
   width: 90%;
   margin: 0 auto;
+  text-align: left;
 }
 
 .About {
@@ -10,4 +11,33 @@
   margin-top: 15px;
   border-radius: 14px;
   padding: 15px 0 15px 0;
+}
+
+.About button {
+  font-size: 1em;
+  background: #535252;
+  color: #88b4cc;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.About .redirect {
+  border-top: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.About .go-example,
+.go-methods {
+  margin: 10px;
+  width: 40%;
+}
+
+.go-example p,
+.go-methods p{
+  text-align: center;
+  margin-bottom: 10px;
 }
