@@ -20,7 +20,7 @@ export class Search extends Component {
 
   handleInput = (event) => {
     this.setState({input: event.target.value})
-  }
+  } 
 
   handleClick = async () => {
     this.setState({
@@ -30,9 +30,6 @@ export class Search extends Component {
 
     const url = cleanUrl(this.state.input)
     const response = await destructureUrl(url)
-
-    // console.log('url: ', this.state.input)
-    // console.log('cleaned: ', url)
 
     if (response.errorCode) {
       this.props.sendError(response)
@@ -52,11 +49,11 @@ export class Search extends Component {
     const organization = this.props.cleanArticle.siteName
     const articleText = this.props.cleanArticle.text
     const author = this.props.cleanArticle.author
-    // running all async elements at once:
+
     const orgData = bbbRating(organization)
     const watsonAnalysis = watsonToneAnalysis(articleText)
     const authorData = author ? googleAuthor(author) : 'none'
-    // waiting to resolve all:
+
     const ready = await Promise.all([orgData, watsonAnalysis, authorData])
 
     if (ready) {
@@ -74,11 +71,9 @@ export class Search extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log('CDU: ', this.state.searching, this.props.rating)
-    //set a property of rating and compare?
-    if(this.props.rating && this.state.searching) {
-      this.setState({searching: false})
+  componentDidUpdate(newProps) {
+    if((newProps.rating !== this.props.rating) && this.state.searching) {
+      this.setState({searching: false}) 
     }
   }
 
