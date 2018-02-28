@@ -4,7 +4,7 @@ import { cleanArticle, cleanWatsonAnalysis, cleanAuthor, cleanSiteRating } from 
 import { cleanArticleAction, errorAction, ratingAction } from '../../actions/actionIndex'
 import { destructureUrl, bbbRating, watsonToneAnalysis, googleAuthor } from '../../api'
 import './Search.css'
-import { func, object } from 'prop-types'
+import { func, object, string, oneOfType } from 'prop-types'
 import cleanUrl from 'url-clean'
 import { Nav } from '../../components/Nav/Nav'
 import loading from '../../assets/Infinity-loading.gif'
@@ -60,25 +60,26 @@ export class Search extends Component {
     const watsonAnalysis = watsonToneAnalysis(articleText)
     const authorData = author ? googleAuthor(author) : 'none'
 
-    const ready = await Promise.all([orgData, watsonAnalysis, authorData])
+    const rating = await Promise.all([orgData, watsonAnalysis, authorData])
+    this.cleanRating(rating)
+  }
 
-    if (ready) {
-      const websiteRating = cleanSiteRating(ready[0].SearchResults)
-      const articleRating = cleanWatsonAnalysis(ready[1])
-      const authorRating = ready[2] === 'none' ? 'none' : cleanAuthor(ready[2])
+  cleanRating = (rating) => {
+    const websiteRating = cleanSiteRating(rating[0].SearchResults)
+    const articleRating = cleanWatsonAnalysis(rating[1])
+    const authorRating = rating[2] === 'none' ? 'none' : cleanAuthor(rating[2])
 
-      this.props.sendRating(
-        {
-          website: websiteRating,
-          author: authorRating,
-          article: articleRating
-        }
-      )
-    }
+    this.props.sendRating(
+      {
+        website: websiteRating,
+        author: authorRating,
+        article: articleRating
+      }
+    )
   }
 
   componentDidUpdate(newProps) {
-    if((newProps.rating !== this.props.rating) && this.state.searching) {
+    if ((newProps.rating !== this.props.rating) && this.state.searching) {
       this.setState({searching: false}) 
     }
   }
@@ -110,7 +111,8 @@ Search.propTypes = {
   sendError: func,
   sendRating: func,
   sendCleanArticle: func,
-  history: object
+  history: object,
+  rating: oneOfType([object, string])
 }
 
 export const mapState = (state) => ({

@@ -1,4 +1,5 @@
 import React from 'react'
+import { object } from 'prop-types'
 import './About.css'
 
 export const About = ({ history }) => {
@@ -26,9 +27,6 @@ export const About = ({ history }) => {
         The end goal is that Facebook and other social media giants will one day score every article posted,
         so that readers are alert to the implications. Disclaimer: this is NOT a fact-checker!
       </p>
-      {
-        console.log('history: ', history)
-      }
       <div className="redirect">
         <div className="go-example">
           <p>suggested URLs:</p>
@@ -45,4 +43,8 @@ export const About = ({ history }) => {
       </div>
     </div>
   )
+}
+
+About.propTypes = {
+  history: object
 }

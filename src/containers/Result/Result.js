@@ -29,7 +29,7 @@ export const Result = ({ error, cleanArticle, rating }) => {
           <div className="result-info Result">
             <h2>Rating: {combinedScore(rating)}</h2>
             <h3>Organization: {rating.website}</h3>
-            <h3>Author: search {rating.author.searchLength}</h3>
+            <h3>Author: {rating.author.searchLength}</h3>
             <h3>
               Content: 
               anger {rating.article.anger}, 
