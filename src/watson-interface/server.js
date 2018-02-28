@@ -6,7 +6,6 @@ const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3')
 const toneAnalyzer = new ToneAnalyzerV3(user)
 const bodyParser = require('body-parser')
 const scholar = require('google-scholar')
-//nodemon - will constantly refresh
 
 app.use(bodyParser.json())
 
