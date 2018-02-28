@@ -12,15 +12,15 @@ const mockFail = {
 describe('cleanArticleReducer', () => {
 
   it('should return the payload if type matches', () => {
-    const actual = cleanArticleReducer(null, mockAction)
+    const actual = cleanArticleReducer(undefined, mockAction)
     const expected = 'hello'
 
     expect(actual).toEqual(expected)
   })
 
   it('should return the default state if type does not match', () => {
-    const actual = cleanArticleReducer(null, mockFail)
-    const expected = null
+    const actual = cleanArticleReducer(undefined, mockFail)
+    const expected = {}
 
     expect(actual).toEqual(expected)
   })

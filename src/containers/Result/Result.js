@@ -14,18 +14,18 @@ export const Result = ({ error, cleanArticle, rating }) => {
       </div>
     )
 
-  } else if (cleanArticle) {
+  } else if (cleanArticle.type) {
     const {title, type, author, date, siteName, text} = cleanArticle
 
     return (
       <div className="Result">
         {
-          !rating &&
+          !rating.article &&
           <h2>Rating: Pending</h2>
         }
 
         {
-          rating &&
+          rating.article &&
           <div className="result-info Result">
             <h2>Rating: {combinedScore(rating)}</h2>
             <h3>Organization: {rating.website}</h3>
