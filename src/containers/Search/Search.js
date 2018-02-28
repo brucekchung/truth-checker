@@ -20,29 +20,35 @@ export class Search extends Component {
 
   handleInput = (event) => {
     this.setState({input: event.target.value})
-  } 
+  }
 
-  handleClick = async () => {
+  handleClick = () => {
     this.setState({
       input: '',
       searching: true
     })
 
+    this.parseArticle()
+  }
+
+  parseArticle = async () => {
     const url = cleanUrl(this.state.input)
     const response = await destructureUrl(url)
-
+    
     if (response.errorCode) {
       this.props.sendError(response)
-
     } else {
-      const cleaned = cleanArticle(response)
+      this.sendArticle(response)
+    }  
+  }
 
-      this.props.sendCleanArticle(cleaned)
-      this.props.sendError(null)
-      this.getRating()
-    }
+  sendArticle = (response) => {
+    const cleaned = cleanArticle(response)
 
+    this.props.sendCleanArticle(cleaned)
+    this.props.sendError(null)
     this.props.history.push('./result')
+    this.getRating()
   }
 
   getRating = async () => {
@@ -82,7 +88,7 @@ export class Search extends Component {
       <div className="Search">
         {
           this.state.searching &&
-          <img className="loading-gif" src={loading} />
+          <img className="loading-gif" alt="loading-gif" src={loading} />
         }
         <input
           value={this.state.input}
