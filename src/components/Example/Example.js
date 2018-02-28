@@ -4,7 +4,7 @@ import './Example.css'
 export const Example = () => (
   <div className="Example">
     <h2>Examples </h2>
-    <h4>Copy and paste any of the following links into the search bar to see how Truth-check responds to a variety of sources:</h4>
+    <h4>Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:</h4>
     <div className='card'>
       <h5>Features tone of bias against a political figure</h5>
       <p>https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade</p>

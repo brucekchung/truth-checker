@@ -12,6 +12,7 @@ ShallowWrapper {
     }
     sendCleanArticle={[Function]}
     sendError={[Function]}
+    sendRating={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

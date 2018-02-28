@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Search, mapState, mapDispatch } from './Search'
@@ -14,6 +15,7 @@ describe('Search', () => {
     wrapper = shallow(<Search 
       sendError={mockFunction}
       sendCleanArticle={mockFunction}
+      sendRating={mockFunction}
       history={mockHistory}
     />)
   })
@@ -84,20 +86,25 @@ describe('Search', () => {
     expect(wrapper.instance().state.input).toEqual('stuff')
   })
 
-  it.skip('getRating should do many, many things', () => {
-    //makes api calls to bbb, watson, author
-    //cleans all three
-    //sends rating up
+  it('cleanRating should call sendRating', () => {
+    const mockClean = jest.fn().mockImplementation(() => {
+        article: 'formatted'
+    })
+    cleaner.cleanSiteRating = mockClean
+    cleaner.cleanWatsonAnalysis = mockClean
+    cleaner.cleanAuthor = mockClean
+
+    wrapper.instance().cleanRating([[],[],[]])
+    expect(mockFunction).toHaveBeenCalled()
   })
 
-  it.skip('componentDidUpdate should setState of searching to false if params are met', () => {
-    wrapper = shallow(<Search rating='stuff' />)
-    const newProp = {rating: 'good'}
-
+  it('componentDidUpdate should setState of searching to false if params are met', () => {
+    wrapper = shallow(<Search rating='okay' />)
     wrapper.instance().setState({searching: true})
-    //console.log('state: ', wrapper.instance().state)
-    
+
+    const newProp = {rating: 'good'}
     wrapper.instance().componentDidUpdate(newProp)
-    //console.log('props: ', wrapper.prop('rating'))
+    
+    expect(wrapper.instance().state.searching).toEqual(false)
   })
 })
