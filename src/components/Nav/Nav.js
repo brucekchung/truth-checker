@@ -7,5 +7,6 @@ export const Nav = () => (
     <NavLink className="Nav" exact to='/'>About</NavLink>
     <NavLink className="Nav" to='/Methods'>Methods</NavLink>
     <NavLink className="Nav" to='/Result'>Result</NavLink>
+    <NavLink className="Nav" to='/Example'>Example</NavLink>
   </div>
 )

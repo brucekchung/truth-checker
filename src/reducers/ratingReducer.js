@@ -1,4 +1,4 @@
-export const ratingReducer = (state = null, action) => {
+export const ratingReducer = (state = {}, action) => {
   switch (action.type) {
     case 'RATING':
       return action.payload
