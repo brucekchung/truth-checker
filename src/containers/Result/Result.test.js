@@ -4,8 +4,12 @@ import { shallow } from 'enzyme'
 import { mockState } from '../../mockData'
 
 describe('Result', () => {
+
   it('should match the snapshot', () => {
-    const wrapper = shallow(<Result />)
+    const wrapper = shallow(<Result 
+      cleanArticle={{type: 'article'}}
+      rating={{stuff: 0}}
+    />)
 
     expect(wrapper).toMatchSnapshot()
   })

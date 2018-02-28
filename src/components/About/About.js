@@ -21,10 +21,10 @@ export const About = ({ history }) => {
         Facebook leads social media sites as a news outlet and is largely uncontrolled.
         Users can post &apos;fake news&apos; and reach a large user base.  
         This is a concerning issue - especially in light of reports of Russian interference in the 2016 election.
-        This site attempts the first step in creating what Facebook or Twitter should do to make their user base more aware.
+        This site attempts the <b>first step in creating what Facebook or Twitter should do</b> to make their user base more aware.
         The first step is being able to assess the validity of an online news article in a completely automated way by simply having access to the url.
         The url (online article) should be assessed according to a set of criteria and scored for the possiblity of being valid, unbiased news.
-        The end goal is that Facebook and other social media giants will one day score every article posted,
+        The end goal is that <b>Facebook</b> and other social media giants will one day <b>score every article posted</b>,
         so that readers are alert to the implications. Disclaimer: this is NOT a fact-checker!
       </p>
       <div className="redirect">

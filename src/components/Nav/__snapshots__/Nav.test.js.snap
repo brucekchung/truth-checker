@@ -43,6 +43,14 @@ ShallowWrapper {
 >
           Result
 </NavLink>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="Nav"
+          to="/Example"
+>
+          Example
+</NavLink>,
       ],
       "className": "Navi",
     },
@@ -94,6 +102,21 @@ ShallowWrapper {
         "rendered": "Result",
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "Example",
+          "className": "Nav",
+          "to": "/Example",
+        },
+        "ref": null,
+        "rendered": "Example",
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -128,6 +151,14 @@ ShallowWrapper {
             to="/Result"
 >
             Result
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="Nav"
+            to="/Example"
+>
+            Example
 </NavLink>,
         ],
         "className": "Navi",
@@ -178,6 +209,21 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Result",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "Example",
+            "className": "Nav",
+            "to": "/Example",
+          },
+          "ref": null,
+          "rendered": "Example",
           "type": [Function],
         },
       ],
