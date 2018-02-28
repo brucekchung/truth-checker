@@ -1,14 +1,21 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Search, mapState, mapDispatch } from './Search'
-import { mockState } from '../../mockData'
+import { mock, mockState } from '../../mockData'
 import * as apiCalls from '../../api'
+import * as cleaner from '../../cleaner'
 
 describe('Search', () => {
   let wrapper
+  const mockFunction = jest.fn()
+  const mockHistory = {push: jest.fn()}
   
   beforeEach(() => {
-    wrapper = shallow(<Search />)
+    wrapper = shallow(<Search 
+      sendError={mockFunction}
+      sendCleanArticle={mockFunction}
+      history={mockHistory}
+    />)
   })
 
   it('should match the snapshot', () => {
@@ -50,29 +57,25 @@ describe('Search', () => {
     expect(apiCalls.destructureUrl).toHaveBeenCalled()
   })
 
-  it.skip('parseArticle should send an Error if the response has an error code', () => {
-    const mockFunction = jest.fn()
-    wrapper = shallow(<Search sendError={mockFunction}/>)
-
+  it('parseArticle should send an Error if the response has an error code', async () => {
     apiCalls.destructureUrl = jest.fn().mockImplementation(() => Promise.resolve({
         errorCode: 404
     }))
     wrapper.instance().sendArticle = jest.fn()
 
     wrapper.instance().parseArticle()
-    expect(mockFunction).toHaveBeenCalled()
-  }) 
-
-  it.skip('handleClick should do many things', () => {
-    //cleans and destructures url
-    //may send error code
-    //cleans the article
-    //sends an error and article to store
-    //calls this.getRating
-    //pushes to result component
+    expect(await mockFunction).toHaveBeenCalled()
   })
 
+  it('sendArticle should call getRating', () => {
+    cleaner.cleanArticle = jest.fn().mockImplementation(() => Promise.resolve({
+        article: 'formatted'
+    }))
+    wrapper.instance().getRating = jest.fn()
 
+    wrapper.instance().sendArticle(mock)
+    expect(mockFunction).toHaveBeenCalled()
+  })
 
   it('handleInput should setState based on the input', () => {
     const event = {target: {value: 'stuff'}}

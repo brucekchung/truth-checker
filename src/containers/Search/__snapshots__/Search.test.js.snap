@@ -4,7 +4,15 @@ exports[`Search should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Search />,
+  Symbol(enzyme.__unrendered__): <Search
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    sendCleanArticle={[Function]}
+    sendError={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
