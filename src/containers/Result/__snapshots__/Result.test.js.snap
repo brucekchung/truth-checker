@@ -170,3 +170,438 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`Result should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    cleanArticle={
+        Object {
+            "type": "article",
+          }
+    }
+    rating={
+        Object {
+            "stuff": 0,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Rating: Pending
+</h2>,
+        undefined,
+        <div
+          className="article-info Result"
+>
+          <p>
+                    title: 
+          </p>
+          <p>
+                    type: 
+                    article
+          </p>
+          <p>
+                    author: 
+          </p>
+          <p>
+                    date: 
+          </p>
+          <p>
+                    site name: 
+          </p>
+          <p>
+                    original text: 
+          </p>
+          <div
+                    className="original-text"
+          />
+</div>,
+      ],
+      "className": "Result",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Rating: Pending",
+        },
+        "ref": null,
+        "rendered": "Rating: Pending",
+        "type": "h2",
+      },
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              title: 
+</p>,
+            <p>
+              type: 
+              article
+</p>,
+            <p>
+              author: 
+</p>,
+            <p>
+              date: 
+</p>,
+            <p>
+              site name: 
+</p>,
+            <p>
+              original text: 
+</p>,
+            <div
+              className="original-text"
+/>,
+          ],
+          "className": "article-info Result",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "title: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "title: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "type: ",
+                "article",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "type: ",
+              "article",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "author: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "author: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "date: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "date: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "site name: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "site name: ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "original text: ",
+            },
+            "ref": null,
+            "rendered": "original text: ",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "original-text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Rating: Pending
+</h2>,
+          undefined,
+          <div
+            className="article-info Result"
+>
+            <p>
+                        title: 
+            </p>
+            <p>
+                        type: 
+                        article
+            </p>
+            <p>
+                        author: 
+            </p>
+            <p>
+                        date: 
+            </p>
+            <p>
+                        site name: 
+            </p>
+            <p>
+                        original text: 
+            </p>
+            <div
+                        className="original-text"
+            />
+</div>,
+        ],
+        "className": "Result",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Rating: Pending",
+          },
+          "ref": null,
+          "rendered": "Rating: Pending",
+          "type": "h2",
+        },
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                title: 
+</p>,
+              <p>
+                type: 
+                article
+</p>,
+              <p>
+                author: 
+</p>,
+              <p>
+                date: 
+</p>,
+              <p>
+                site name: 
+</p>,
+              <p>
+                original text: 
+</p>,
+              <div
+                className="original-text"
+/>,
+            ],
+            "className": "article-info Result",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "title: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "title: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "type: ",
+                  "article",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "type: ",
+                "article",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "author: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "author: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "date: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "date: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "site name: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "site name: ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "original text: ",
+              },
+              "ref": null,
+              "rendered": "original text: ",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "original-text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

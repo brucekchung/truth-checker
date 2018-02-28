@@ -18,36 +18,62 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <p>
-          example url: 
-</p>,
-        <p>
-          https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400
-</p>,
-        <p>
-          https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
-</p>,
-        <p>
-          https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
-</p>,
-        <p>
-          http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html
-</p>,
-        <p>
-          https://www.washingtonpost.com/?utm_term=.4205470b3748
-</p>,
-        <p>
-          https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing
-</p>,
-        <p>
-          http://www.bbc.com/news/world-us-canada-43088644
-</p>,
-        <p>
-          http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook
-</p>,
-        <p>
-          https://www.rd.com/advice/parenting/stop-bullying-strategy/
-</p>,
+        <h2>
+          Examples 
+</h2>,
+        <h4>
+          Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:
+</h4>,
+        <div
+          className="card"
+>
+          <h5>
+                    Features tone of bias against a political figure
+          </h5>
+          <p>
+                    https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
+          </p>
+</div>,
+        <div
+          className="card"
+>
+          <h5>
+                    Informative article about travel
+          </h5>
+          <p>
+                    https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
+          </p>
+</div>,
+        <div
+          className="card"
+>
+          <h5>
+                    Satirical article from The Onion
+          </h5>
+          <p>
+                    https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763
+          </p>
+</div>,
+        <div
+          className="card"
+>
+          <h5>
+                    Article from a polarizing site (Brietbart News) containing a somewhat racy view
+          </h5>
+          <p>
+                    http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/
+          </p>
+</div>,
+        <div
+          className="card"
+>
+          <h5>
+                    Article from a polarizing site (Brietbart News) on school shootings
+          </h5>
+          <p>
+                    http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/
+          </p>
+</div>,
       ],
       "className": "Example",
     },
@@ -58,110 +84,232 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "example url: ",
+          "children": "Examples ",
         },
         "ref": null,
-        "rendered": "example url: ",
-        "type": "p",
+        "rendered": "Examples ",
+        "type": "h2",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400",
+          "children": "Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:",
         },
         "ref": null,
-        "rendered": "https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400",
-        "type": "p",
+        "rendered": "Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:",
+        "type": "h4",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+          "children": Array [
+            <h5>
+              Features tone of bias against a political figure
+</h5>,
+            <p>
+              https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
+</p>,
+          ],
+          "className": "card",
         },
         "ref": null,
-        "rendered": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Features tone of bias against a political figure",
+            },
+            "ref": null,
+            "rendered": "Features tone of bias against a political figure",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+            },
+            "ref": null,
+            "rendered": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+          "children": Array [
+            <h5>
+              Informative article about travel
+</h5>,
+            <p>
+              https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
+</p>,
+          ],
+          "className": "card",
         },
         "ref": null,
-        "rendered": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Informative article about travel",
+            },
+            "ref": null,
+            "rendered": "Informative article about travel",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+            },
+            "ref": null,
+            "rendered": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html",
+          "children": Array [
+            <h5>
+              Satirical article from The Onion
+</h5>,
+            <p>
+              https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763
+</p>,
+          ],
+          "className": "card",
         },
         "ref": null,
-        "rendered": "http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Satirical article from The Onion",
+            },
+            "ref": null,
+            "rendered": "Satirical article from The Onion",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763",
+            },
+            "ref": null,
+            "rendered": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "https://www.washingtonpost.com/?utm_term=.4205470b3748",
+          "children": Array [
+            <h5>
+              Article from a polarizing site (Brietbart News) containing a somewhat racy view
+</h5>,
+            <p>
+              http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/
+</p>,
+          ],
+          "className": "card",
         },
         "ref": null,
-        "rendered": "https://www.washingtonpost.com/?utm_term=.4205470b3748",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Article from a polarizing site (Brietbart News) containing a somewhat racy view",
+            },
+            "ref": null,
+            "rendered": "Article from a polarizing site (Brietbart News) containing a somewhat racy view",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/",
+            },
+            "ref": null,
+            "rendered": "http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing",
+          "children": Array [
+            <h5>
+              Article from a polarizing site (Brietbart News) on school shootings
+</h5>,
+            <p>
+              http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/
+</p>,
+          ],
+          "className": "card",
         },
         "ref": null,
-        "rendered": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "http://www.bbc.com/news/world-us-canada-43088644",
-        },
-        "ref": null,
-        "rendered": "http://www.bbc.com/news/world-us-canada-43088644",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook",
-        },
-        "ref": null,
-        "rendered": "http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "https://www.rd.com/advice/parenting/stop-bullying-strategy/",
-        },
-        "ref": null,
-        "rendered": "https://www.rd.com/advice/parenting/stop-bullying-strategy/",
-        "type": "p",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Article from a polarizing site (Brietbart News) on school shootings",
+            },
+            "ref": null,
+            "rendered": "Article from a polarizing site (Brietbart News) on school shootings",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/",
+            },
+            "ref": null,
+            "rendered": "http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -173,36 +321,62 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <p>
-            example url: 
-</p>,
-          <p>
-            https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400
-</p>,
-          <p>
-            https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
-</p>,
-          <p>
-            https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
-</p>,
-          <p>
-            http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html
-</p>,
-          <p>
-            https://www.washingtonpost.com/?utm_term=.4205470b3748
-</p>,
-          <p>
-            https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing
-</p>,
-          <p>
-            http://www.bbc.com/news/world-us-canada-43088644
-</p>,
-          <p>
-            http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook
-</p>,
-          <p>
-            https://www.rd.com/advice/parenting/stop-bullying-strategy/
-</p>,
+          <h2>
+            Examples 
+</h2>,
+          <h4>
+            Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:
+</h4>,
+          <div
+            className="card"
+>
+            <h5>
+                        Features tone of bias against a political figure
+            </h5>
+            <p>
+                        https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
+            </p>
+</div>,
+          <div
+            className="card"
+>
+            <h5>
+                        Informative article about travel
+            </h5>
+            <p>
+                        https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
+            </p>
+</div>,
+          <div
+            className="card"
+>
+            <h5>
+                        Satirical article from The Onion
+            </h5>
+            <p>
+                        https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763
+            </p>
+</div>,
+          <div
+            className="card"
+>
+            <h5>
+                        Article from a polarizing site (Brietbart News) containing a somewhat racy view
+            </h5>
+            <p>
+                        http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/
+            </p>
+</div>,
+          <div
+            className="card"
+>
+            <h5>
+                        Article from a polarizing site (Brietbart News) on school shootings
+            </h5>
+            <p>
+                        http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/
+            </p>
+</div>,
         ],
         "className": "Example",
       },
@@ -213,110 +387,232 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "example url: ",
+            "children": "Examples ",
           },
           "ref": null,
-          "rendered": "example url: ",
-          "type": "p",
+          "rendered": "Examples ",
+          "type": "h2",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400",
+            "children": "Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:",
           },
           "ref": null,
-          "rendered": "https://www.wsj.com/articles/like-peter-thiel-others-feel-alienated-by-silicon-valley-groupthink-1518962400",
-          "type": "p",
+          "rendered": "Copy and paste any of the following links into the search bar to see how News-rater responds to a variety of sources:",
+          "type": "h4",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+            "children": Array [
+              <h5>
+                Features tone of bias against a political figure
+</h5>,
+              <p>
+                https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade
+</p>,
+            ],
+            "className": "card",
           },
           "ref": null,
-          "rendered": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Features tone of bias against a political figure",
+              },
+              "ref": null,
+              "rendered": "Features tone of bias against a political figure",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+              },
+              "ref": null,
+              "rendered": "https://www.bloomberg.com/news/articles/2018-01-09/trump-loving-farmers-let-him-know-that-they-also-love-free-trade",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+            "children": Array [
+              <h5>
+                Informative article about travel
+</h5>,
+              <p>
+                https://www.cnn.com/travel/article/passenger-planes-future-look/index.html
+</p>,
+            ],
+            "className": "card",
           },
           "ref": null,
-          "rendered": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Informative article about travel",
+              },
+              "ref": null,
+              "rendered": "Informative article about travel",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+              },
+              "ref": null,
+              "rendered": "https://www.cnn.com/travel/article/passenger-planes-future-look/index.html",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html",
+            "children": Array [
+              <h5>
+                Satirical article from The Onion
+</h5>,
+              <p>
+                https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763
+</p>,
+            ],
+            "className": "card",
           },
           "ref": null,
-          "rendered": "http://www.independent.co.uk/voices/holocaust-israel-poland-history-difficult-acknowledge-netanyahu-jewish-polish-government-a8212071.html",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Satirical article from The Onion",
+              },
+              "ref": null,
+              "rendered": "Satirical article from The Onion",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763",
+              },
+              "ref": null,
+              "rendered": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "https://www.washingtonpost.com/?utm_term=.4205470b3748",
+            "children": Array [
+              <h5>
+                Article from a polarizing site (Brietbart News) containing a somewhat racy view
+</h5>,
+              <p>
+                http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/
+</p>,
+            ],
+            "className": "card",
           },
           "ref": null,
-          "rendered": "https://www.washingtonpost.com/?utm_term=.4205470b3748",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Article from a polarizing site (Brietbart News) containing a somewhat racy view",
+              },
+              "ref": null,
+              "rendered": "Article from a polarizing site (Brietbart News) containing a somewhat racy view",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/",
+              },
+              "ref": null,
+              "rendered": "http://www.breitbart.com/big-journalism/2018/02/27/jorge-ramos-very-sad-latino-trump-voters-turned-backs-on-immigrants/",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing",
+            "children": Array [
+              <h5>
+                Article from a polarizing site (Brietbart News) on school shootings
+</h5>,
+              <p>
+                http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/
+</p>,
+            ],
+            "className": "card",
           },
           "ref": null,
-          "rendered": "https://www.theonion.com/nra-calls-for-teachers-to-keep-loaded-gun-pointed-at-cl-1819575763?utm_content=Main&utm_campaign=SF&utm_source=Facebook&utm_medium=SocialMarketing",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "http://www.bbc.com/news/world-us-canada-43088644",
-          },
-          "ref": null,
-          "rendered": "http://www.bbc.com/news/world-us-canada-43088644",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook",
-          },
-          "ref": null,
-          "rendered": "http://www.dancemagazine.com/peter-martins-nycb-investigation-results-2535425336.html?utm_campaign=RebelMouse&socialux=facebook&share_id=3329042&utm_medium=social&utm_content=Dance+Magazine&utm_source=facebook",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "https://www.rd.com/advice/parenting/stop-bullying-strategy/",
-          },
-          "ref": null,
-          "rendered": "https://www.rd.com/advice/parenting/stop-bullying-strategy/",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Article from a polarizing site (Brietbart News) on school shootings",
+              },
+              "ref": null,
+              "rendered": "Article from a polarizing site (Brietbart News) on school shootings",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/",
+              },
+              "ref": null,
+              "rendered": "http://www.breitbart.com/big-government/2018/02/27/poll-americans-blame-school-shooting-government-not-guns/",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

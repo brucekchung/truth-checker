@@ -24,7 +24,7 @@ ShallowWrapper {
           <h1
                     className="App-title"
           >
-                    Truth-check
+                    News-rater
           </h1>
 </header>,
         <Unknown />,
@@ -41,7 +41,7 @@ ShallowWrapper {
           "children": <h1
             className="App-title"
 >
-            Truth-check
+            News-rater
 </h1>,
           "className": "App-header",
         },
@@ -51,11 +51,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Truth-check",
+            "children": "News-rater",
             "className": "App-title",
           },
           "ref": null,
-          "rendered": "Truth-check",
+          "rendered": "News-rater",
           "type": "h1",
         },
         "type": "header",
@@ -85,7 +85,7 @@ ShallowWrapper {
             <h1
                         className="App-title"
             >
-                        Truth-check
+                        News-rater
             </h1>
 </header>,
           <Unknown />,
@@ -102,7 +102,7 @@ ShallowWrapper {
             "children": <h1
               className="App-title"
 >
-              Truth-check
+              News-rater
 </h1>,
             "className": "App-header",
           },
@@ -112,11 +112,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Truth-check",
+              "children": "News-rater",
               "className": "App-title",
             },
             "ref": null,
-            "rendered": "Truth-check",
+            "rendered": "News-rater",
             "type": "h1",
           },
           "type": "header",
